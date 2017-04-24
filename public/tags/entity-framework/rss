@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entity Framework on Liam Blizard&#39;s Dev Blog</title>
+    <link>http://liamblizard.co.uk/tags/entity-framework/rss/</link>
+    <description>Recent content in Entity Framework on Liam Blizard&#39;s Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="http://liamblizard.co.uk/tags/entity-framework/rss/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Index Attribute in EF 6.1</title>
+      <link>http://liamblizard.co.uk/post/EF6.1-Index-Attribute/</link>
+      <pubDate>Sat, 23 Mar 2013 11:40:41 +0100</pubDate>
+      
+      <guid>http://liamblizard.co.uk/post/EF6.1-Index-Attribute/</guid>
+      <description>&lt;p&gt;Early last week Entity Framework 6.1 &lt;a href=&#34;http://blogs.msdn.com/b/adonet/archive/2014/03/17/ef6-1-0-rtm-available.aspx&#34;&gt;went RTM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Amongst the usual performance improvements and a bunch of other stuff that will probably come in useful was the addition of &lt;a href=&#34;http://msdn.microsoft.com/en-US/data/jj591583#Index&#34;&gt;Index Attributes&lt;/a&gt;, which allow the developer to create indexes by annotating their code first models.&lt;/p&gt;
+
+&lt;p&gt;This attribute allows the creation of unique indexes as well as supporting multi-column indexes.&lt;/p&gt;
+
+&lt;p&gt;A project I&amp;rsquo;m working on at the moment has the following entity&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Pledge
+{
+    public int Id {get;set;}
+    public int AttendeeId {get;set;}
+    public int ProjectId {get;set;}
+    public int EventId {get;set;}
+
+    //other properties
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A Pledge must be unique to an Attendee, an Event and a Project&lt;/p&gt;
+
+&lt;p&gt;Prior to EF 6.1, there was no way to annotate your properties and have EF create the database with the indexes already set up. You would have had to create your database then write a migration specfically for the index, like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public partial class AddUniqueIndexToPledge : DbMigration
+{
+    public override void Up()
+    {
+        CreateIndex(&amp;quot;dbo.Pledge&amp;quot;,new[]{&amp;quot;AttendeeId&amp;quot;,&amp;quot;ProjectId&amp;quot;, &amp;quot;EventId&amp;quot;},true);
+    }
+
+    public override void Down()
+    {
+        DropIndex(&amp;quot;dbo.Pledge&amp;quot;, new[]{&amp;quot;AttendeeId&amp;quot;,&amp;quot;ProjectId&amp;quot;, &amp;quot;EventId&amp;quot;});
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Not so difficult, but it&amp;rsquo;s still an extra step rather than just creating the database with the indexes already added.&lt;/p&gt;
+
+&lt;p&gt;Now with Entity Framework 6.1 we can do the below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Pledge
+{
+    public int Id {get;set;}
+    [Index(&amp;quot;IX_AttendeeEventProjectIndex&amp;quot;, IsUnique = true, IsClustered = false)
+    public int AttendeeId {get;set;}
+    [Index(&amp;quot;IX_AttendeeEventProjectIndex&amp;quot;, IsUnique = true, IsClustered = false)
+    public int ProjectId {get;set;}
+    [Index(&amp;quot;IX_AttendeeEventProjectIndex&amp;quot;, IsUnique = true, IsClustered = false)
+    public int EventId {get;set;}
+
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Which will create the following index&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE UNIQUE NONCLUSTERED INDEX [IX_AttendeeEventProjectIndex] ON [dbo].[Pledges]
+(
+[AttendeeId] ASC,
+[EventId] ASC,
+[ProjectId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

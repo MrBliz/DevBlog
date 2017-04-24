@@ -6,6 +6,7 @@ paginate = 5
 footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus-theme"
 disqusShortname = "liamblizard"
+rssURI = "rss/"
 
 [params]
   Author = "Liam Blizard"

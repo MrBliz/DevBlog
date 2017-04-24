@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Liam Blizard&#39;s Dev Blog</title>
+    <link>http://liamblizard.co.uk/post/rss/</link>
+    <description>Recent content in Posts on Liam Blizard&#39;s Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Sat, 03 Jan 2015 09:34:15 +0100</lastBuildDate>
+    <atom:link href="http://liamblizard.co.uk/post/rss/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Auth Fails error when connecting to Mongo</title>
+      <link>http://liamblizard.co.uk/post/Auth-Fails/</link>
+      <pubDate>Sat, 03 Jan 2015 09:34:15 +0100</pubDate>
+      
+      <guid>http://liamblizard.co.uk/post/Auth-Fails/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been playing around with MongoDb a bit recently,  using the free tier of the MongoLab service on Azure.&lt;/p&gt;
+
+&lt;p&gt;Connecting to Mongolab via terminal using the below command ;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;`mongo xxxxxx.mongolab.com:xxxxx/DBName -u &amp;lt;username&amp;gt; -p &amp;lt;password&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;came back with the following error.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;MongoDB shell version: 2.6.0
+connecting to: xxxxxx.mongolab.com:xxxxx/DBname
+2014-09-24T23:01:18.984+0100 Error: 18 { code: 18, ok: 0.0, errmsg: &amp;quot;auth fails&amp;quot; } at src/mongo/shell/db.js:1210
+exception: login failed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I repeated the process, and the same happened again. The credentials were absolutely correct, as was the connection string.&lt;/p&gt;
+
+&lt;p&gt;Fortunately Mongolabs&amp;rsquo; support is quick, and by quick, i mean &lt;em&gt;super-quick&lt;/em&gt;. Less than 5 minutes after i&amp;rsquo;d emailed them they got back to me with some diagnostic information&lt;/p&gt;
+
+&lt;p&gt;Wed Sep 24 15:01:17.960 [initandlisten] connection accepted from 86.153.168.248:62035 #463878 (268 connections now open)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Wed Sep 24 15:01:18.275 [conn463878]  authenticate db: DBName { authenticate: 1, nonce: &amp;quot;4e36d04ecd3376d1&amp;quot;, user: &amp;quot;MyUserName&amp;quot;, key: &amp;quot;655f7054037b5188c385fd94605f84cf&amp;quot; }
+
+Wed Sep 24 15:01:18.275 [conn463878] auth: key mismatch MyUserName, ns:DBName
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It turns out that the password was incorrect, because i&amp;rsquo;d got characters in the password that needed escaping.&lt;/p&gt;
+
+&lt;p&gt;So using a password with nothing esoteric character-wise is probably a safe option to avoid errors like this in the future.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Manually Associating Git Commits in Visual Studio Online</title>
+      <link>http://liamblizard.co.uk/post/manually-associating-Git-visual-studio-online/</link>
+      <pubDate>Thu, 03 Jul 2014 11:38:19 +0100</pubDate>
+      
+      <guid>http://liamblizard.co.uk/post/manually-associating-Git-visual-studio-online/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re using Visual Studio Online (VSO) for all our Source Control/Work planning needs at my current client, which is working pretty well, and most importantly free, for our small 3 person team.&lt;/p&gt;
+
+&lt;p&gt;You can automatically connect git commits to your work items in VSO by simply adding a hashtag with the Id of the Work Item to the beginning of your commit messages eg: #24 Added Files Model.&lt;/p&gt;
+
+&lt;p&gt;You can also manually link the git commits. This has mostly come in handy when i&amp;rsquo;ve forgot to add the hashtag, which happens quite often, especially when you&amp;rsquo;re in a furious coding session and you don&amp;rsquo;t want to break off and look up the id of the item you want to link the commit to. Perhaps you and your team also don&amp;rsquo;t want to pollute your Source code repositories with hashtags specific to Visual Studio Online.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s easy to do, but perhaps not immediately obvious, as it&amp;rsquo;s buried in the Links tab.&lt;/p&gt;
+
+&lt;p&gt;Firstly, click on &amp;lsquo;All Links&amp;rsquo; tab in the right hand panel, and then click on the &amp;lsquo;link to&amp;hellip;&amp;rsquo; icon.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll get a popup asking what type of link you want. Select &amp;lsquo;Commit&amp;rsquo; from the dropdown, and then choose which Repository you want to use. Click on the browse button, and you&amp;rsquo;ll get another popup.&lt;/p&gt;
+
+&lt;p&gt;In that popup, select the user, branch and any dates you want to filter by and click &amp;lsquo;Find&amp;rsquo;. You&amp;rsquo;ll get a list of commits, and simply click the radio button against whichever commit it is you want to link to the work item.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Index Attribute in EF 6.1</title>
+      <link>http://liamblizard.co.uk/post/EF6.1-Index-Attribute/</link>
+      <pubDate>Sat, 23 Mar 2013 11:40:41 +0100</pubDate>
+      
+      <guid>http://liamblizard.co.uk/post/EF6.1-Index-Attribute/</guid>
+      <description>&lt;p&gt;Early last week Entity Framework 6.1 &lt;a href=&#34;http://blogs.msdn.com/b/adonet/archive/2014/03/17/ef6-1-0-rtm-available.aspx&#34;&gt;went RTM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Amongst the usual performance improvements and a bunch of other stuff that will probably come in useful was the addition of &lt;a href=&#34;http://msdn.microsoft.com/en-US/data/jj591583#Index&#34;&gt;Index Attributes&lt;/a&gt;, which allow the developer to create indexes by annotating their code first models.&lt;/p&gt;
+
+&lt;p&gt;This attribute allows the creation of unique indexes as well as supporting multi-column indexes.&lt;/p&gt;
+
+&lt;p&gt;A project I&amp;rsquo;m working on at the moment has the following entity&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Pledge
+{
+    public int Id {get;set;}
+    public int AttendeeId {get;set;}
+    public int ProjectId {get;set;}
+    public int EventId {get;set;}
+
+    //other properties
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A Pledge must be unique to an Attendee, an Event and a Project&lt;/p&gt;
+
+&lt;p&gt;Prior to EF 6.1, there was no way to annotate your properties and have EF create the database with the indexes already set up. You would have had to create your database then write a migration specfically for the index, like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public partial class AddUniqueIndexToPledge : DbMigration
+{
+    public override void Up()
+    {
+        CreateIndex(&amp;quot;dbo.Pledge&amp;quot;,new[]{&amp;quot;AttendeeId&amp;quot;,&amp;quot;ProjectId&amp;quot;, &amp;quot;EventId&amp;quot;},true);
+    }
+
+    public override void Down()
+    {
+        DropIndex(&amp;quot;dbo.Pledge&amp;quot;, new[]{&amp;quot;AttendeeId&amp;quot;,&amp;quot;ProjectId&amp;quot;, &amp;quot;EventId&amp;quot;});
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Not so difficult, but it&amp;rsquo;s still an extra step rather than just creating the database with the indexes already added.&lt;/p&gt;
+
+&lt;p&gt;Now with Entity Framework 6.1 we can do the below&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Pledge
+{
+    public int Id {get;set;}
+    [Index(&amp;quot;IX_AttendeeEventProjectIndex&amp;quot;, IsUnique = true, IsClustered = false)
+    public int AttendeeId {get;set;}
+    [Index(&amp;quot;IX_AttendeeEventProjectIndex&amp;quot;, IsUnique = true, IsClustered = false)
+    public int ProjectId {get;set;}
+    [Index(&amp;quot;IX_AttendeeEventProjectIndex&amp;quot;, IsUnique = true, IsClustered = false)
+    public int EventId {get;set;}
+
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Which will create the following index&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE UNIQUE NONCLUSTERED INDEX [IX_AttendeeEventProjectIndex] ON [dbo].[Pledges]
+(
+[AttendeeId] ASC,
+[EventId] ASC,
+[ProjectId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
