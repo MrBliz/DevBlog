@@ -1,7 +1,7 @@
 +++
 date = "2013-03-23T11:40:41+01:00"
 title = "Index Attribute in EF 6.1"
-tags = ["Entity Framework", "EF6.1"]
+tags = ["Entity Framework", "EF6.1", ".NET"]
 menu = ""
  banner = "banners/entity-framework.png"
 +++
