@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-gb">
 <head>
-    <title>Ef6.1 &middot; Liam Blizard&#39;s Dev Blog</title>
+    <title>.Net &middot; Liam Blizard&#39;s Dev Blog</title>
     <meta name="generator" content="Hugo 0.19" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,10 @@
       <meta name="description" content="">
     
     
-      <link href="http://liamblizard.co.uk/tags/ef6.1/index.xml" rel="alternate" type="application/rss+xml" title="Liam Blizard&#39;s Dev Blog" />
-      <link href="http://liamblizard.co.uk/tags/ef6.1/index.xml" rel="feed" type="application/rss+xml" title="Liam Blizard&#39;s Dev Blog" />
+      <link href="http://liamblizard.co.uk/tags/.net/index.xml" rel="alternate" type="application/rss+xml" title="Liam Blizard&#39;s Dev Blog" />
+      <link href="http://liamblizard.co.uk/tags/.net/index.xml" rel="feed" type="application/rss+xml" title="Liam Blizard&#39;s Dev Blog" />
     
-    <link rel="canonical" href="http://liamblizard.co.uk/tags/ef6/index.1/"/>
+    <link rel="canonical" href="http://liamblizard.co.uk/tags/index.net/"/>
     <link rel="icon" href="http://liamblizard.co.uk/favicon.ico">
     <link rel="apple-touch-icon" href="http://liamblizard.co.uk/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://liamblizard.co.uk/css/style.css">
@@ -23,10 +23,10 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Ef6.1" />
+    <meta property="og:title" content=".Net" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://liamblizard.co.uk/tags/ef6/index.1/" />
+<meta property="og:url" content="http://liamblizard.co.uk/tags/index.net/" />
 
 
 
@@ -43,7 +43,7 @@
 
     
     
-<meta itemprop="name" content="Ef6.1">
+<meta itemprop="name" content=".Net">
 <meta itemprop="description" content="">
 
 
@@ -207,7 +207,7 @@
         <section id="main">
             <section class="archives-wrap">
                 <div class="archive-category-wrap">
-                    <span class="archive-category">Ef6.1</span>
+                    <span class="archive-category">.Net</span>
                 </div>
                 <div class="archives">
                     
@@ -254,7 +254,7 @@
                 <div class="item-thumbnail">
                     <a href="http://liamblizard.co.uk/post/Auth-Fails/" class="thumbnail">
                     
-                        <span style="background-image:url(http://liamblizard.co.uk/banners/mongodb.jpg)" alt="Ef6.1" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://liamblizard.co.uk/banners/mongodb.jpg)" alt=".Net" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -271,7 +271,7 @@
                 <div class="item-thumbnail">
                     <a href="http://liamblizard.co.uk/post/manually-associating-Git-visual-studio-online/" class="thumbnail">
                     
-                        <span style="background-image:url(http://liamblizard.co.uk/banners/VisualStudioOnline.jpg)" alt="Ef6.1" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://liamblizard.co.uk/banners/VisualStudioOnline.jpg)" alt=".Net" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -288,7 +288,7 @@
                 <div class="item-thumbnail">
                     <a href="http://liamblizard.co.uk/post/EF6.1-Index-Attribute/" class="thumbnail">
                     
-                        <span style="background-image:url(http://liamblizard.co.uk/banners/entity-framework.png)" alt="Ef6.1" class="thumbnail-image"></span>
+                        <span style="background-image:url(http://liamblizard.co.uk/banners/entity-framework.png)" alt=".Net" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
