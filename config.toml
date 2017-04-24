@@ -1,0 +1,33 @@
+languageCode = "en-gb"
+title = "Liam Blizard's Dev Blog"
+baseurl = "http://liamblizard.co.uk/"
+# Define the number of posts per page
+paginate = 5
+footnotereturnlinkcontents = "↩"
+theme = "hugo-icarus-theme"
+publishDir = "docs"
+disqusShortname = "liamblizard"
+
+[params]
+  Author = "Liam Blizard"
+  bio = "Web Developer working primarily on the .NET platform. Experienced in ASP.NET MVC, SignalR, Web API, AngularJs, Entity Framework. Co-Founder and lead developer of Filanthropy*."
+  location = "London"
+  copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
+  avatar = "css/images/Liam.jpg"
+  logo = "css/images/Liam.jpg"
+  date_format = "2006-01-02"
+
+
+[params.widgets]
+    recent_articles = true
+    #categories = true
+    tags = true
+
+  [social]
+# Add your social network accounts to the profile section on the left
+# by entering your username. The links to your account will be
+# created automatically.
+    github          = "MrBliz"
+    instagram       = "Mr_Bliz"
+    twitter         = "LiamBlizard"
+    
