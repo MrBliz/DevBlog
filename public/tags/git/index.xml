@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Liam Blizard&#39;s Dev Blog</title>
+    <link>http://liamblizard.co.uk/tags/git/index.xml</link>
+    <description>Recent content in Git on Liam Blizard&#39;s Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="http://liamblizard.co.uk/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Manually Associating Git Commits in Visual Studio Online</title>
+      <link>http://liamblizard.co.uk/post/manually-associating-Git-visual-studio-online/</link>
+      <pubDate>Thu, 03 Jul 2014 11:38:19 +0100</pubDate>
+      
+      <guid>http://liamblizard.co.uk/post/manually-associating-Git-visual-studio-online/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re using Visual Studio Online (VSO) for all our Source Control/Work planning needs at my current client, which is working pretty well, and most importantly free, for our small 3 person team.&lt;/p&gt;
+
+&lt;p&gt;You can automatically connect git commits to your work items in VSO by simply adding a hashtag with the Id of the Work Item to the beginning of your commit messages eg: #24 Added Files Model.&lt;/p&gt;
+
+&lt;p&gt;You can also manually link the git commits. This has mostly come in handy when i&amp;rsquo;ve forgot to add the hashtag, which happens quite often, especially when you&amp;rsquo;re in a furious coding session and you don&amp;rsquo;t want to break off and look up the id of the item you want to link the commit to. Perhaps you and your team also don&amp;rsquo;t want to pollute your Source code repositories with hashtags specific to Visual Studio Online.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s easy to do, but perhaps not immediately obvious, as it&amp;rsquo;s buried in the Links tab.&lt;/p&gt;
+
+&lt;p&gt;Firstly, click on &amp;lsquo;All Links&amp;rsquo; tab in the right hand panel, and then click on the &amp;lsquo;link to&amp;hellip;&amp;rsquo; icon.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll get a popup asking what type of link you want. Select &amp;lsquo;Commit&amp;rsquo; from the dropdown, and then choose which Repository you want to use. Click on the browse button, and you&amp;rsquo;ll get another popup.&lt;/p&gt;
+
+&lt;p&gt;In that popup, select the user, branch and any dates you want to filter by and click &amp;lsquo;Find&amp;rsquo;. You&amp;rsquo;ll get a list of commits, and simply click the radio button against whichever commit it is you want to link to the work item.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

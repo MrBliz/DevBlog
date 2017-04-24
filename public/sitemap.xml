@@ -2,7 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://liamblizard.co.uk/post/Auth-Fails/</loc>
+    <lastmod>2015-01-03T09:34:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/post/manually-associating-Git-visual-studio-online/</loc>
+    <lastmod>2014-07-03T11:38:19+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/post/EF6.1-Index-Attribute/</loc>
+    <lastmod>2013-03-23T11:40:41+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/tags/ef6/index.1/</loc>
+    <lastmod>2013-03-23T11:40:41+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/tags/entity-framework/</loc>
+    <lastmod>2013-03-23T11:40:41+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/tags/git/</loc>
+    <lastmod>2014-07-03T11:38:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://liamblizard.co.uk/</loc>
+    <lastmod>2015-01-03T09:34:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/tags/mongodb/</loc>
+    <lastmod>2015-01-03T09:34:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/tags/mongolab/</loc>
+    <lastmod>2015-01-03T09:34:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/post/</loc>
+    <lastmod>2015-01-03T09:34:15+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liamblizard.co.uk/tags/visual-studio-online/</loc>
+    <lastmod>2014-07-03T11:38:19+01:00</lastmod>
     <priority>0</priority>
   </url>
   

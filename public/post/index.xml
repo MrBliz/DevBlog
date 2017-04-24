@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Liam Blizard&#39;s Dev Blog</title>
-    <link>http://liamblizard.co.uk/index.xml</link>
-    <description>Recent content on Liam Blizard&#39;s Dev Blog</description>
+    <title>Posts on Liam Blizard&#39;s Dev Blog</title>
+    <link>http://liamblizard.co.uk/post/index.xml</link>
+    <description>Recent content in Posts on Liam Blizard&#39;s Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Sat, 03 Jan 2015 09:34:15 +0100</lastBuildDate>
-    <atom:link href="http://liamblizard.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://liamblizard.co.uk/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Auth Fails error when connecting to Mongo</title>

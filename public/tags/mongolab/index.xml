@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongolab on Liam Blizard&#39;s Dev Blog</title>
+    <link>http://liamblizard.co.uk/tags/mongolab/index.xml</link>
+    <description>Recent content in Mongolab on Liam Blizard&#39;s Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="http://liamblizard.co.uk/tags/mongolab/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Auth Fails error when connecting to Mongo</title>
+      <link>http://liamblizard.co.uk/post/Auth-Fails/</link>
+      <pubDate>Sat, 03 Jan 2015 09:34:15 +0100</pubDate>
+      
+      <guid>http://liamblizard.co.uk/post/Auth-Fails/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been playing around with MongoDb a bit recently,  using the free tier of the MongoLab service on Azure.&lt;/p&gt;
+
+&lt;p&gt;Connecting to Mongolab via terminal using the below command ;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;`mongo xxxxxx.mongolab.com:xxxxx/DBName -u &amp;lt;username&amp;gt; -p &amp;lt;password&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;came back with the following error.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;MongoDB shell version: 2.6.0
+connecting to: xxxxxx.mongolab.com:xxxxx/DBname
+2014-09-24T23:01:18.984+0100 Error: 18 { code: 18, ok: 0.0, errmsg: &amp;quot;auth fails&amp;quot; } at src/mongo/shell/db.js:1210
+exception: login failed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I repeated the process, and the same happened again. The credentials were absolutely correct, as was the connection string.&lt;/p&gt;
+
+&lt;p&gt;Fortunately Mongolabs&amp;rsquo; support is quick, and by quick, i mean &lt;em&gt;super-quick&lt;/em&gt;. Less than 5 minutes after i&amp;rsquo;d emailed them they got back to me with some diagnostic information&lt;/p&gt;
+
+&lt;p&gt;Wed Sep 24 15:01:17.960 [initandlisten] connection accepted from 86.153.168.248:62035 #463878 (268 connections now open)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Wed Sep 24 15:01:18.275 [conn463878]  authenticate db: DBName { authenticate: 1, nonce: &amp;quot;4e36d04ecd3376d1&amp;quot;, user: &amp;quot;MyUserName&amp;quot;, key: &amp;quot;655f7054037b5188c385fd94605f84cf&amp;quot; }
+
+Wed Sep 24 15:01:18.275 [conn463878] auth: key mismatch MyUserName, ns:DBName
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It turns out that the password was incorrect, because i&amp;rsquo;d got characters in the password that needed escaping.&lt;/p&gt;
+
+&lt;p&gt;So using a password with nothing esoteric character-wise is probably a safe option to avoid errors like this in the future.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

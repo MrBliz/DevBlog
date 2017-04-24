@@ -5,7 +5,6 @@ baseurl = "http://liamblizard.co.uk/"
 paginate = 5
 footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus-theme"
-publishDir = "docs"
 disqusShortname = "liamblizard"
 
 [params]
